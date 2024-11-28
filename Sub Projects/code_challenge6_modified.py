@@ -11,5 +11,7 @@ if (prelim >= 65 and prelim <= 100) and (midterm >= 65 and midterm <= 100) and (
 	FinalG = (prelim * 0.15) + (midterm * 0.15) + (semifinals * 0.15) + (finals * 0.15) + (quiz * 0.25) + (project * 0.15)
 	if FinalG >= 75 and FinalG <= 100:
 		print("Congratulations on passing this subject!!")
+	elif FinalG <= 75:
+		print("Apologies but you did not meet the required total grade for this semester...")
 else:
 	print("Error 404 not found")
