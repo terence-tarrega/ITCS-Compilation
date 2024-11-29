@@ -13,4 +13,4 @@ if hasWorked.lower() == "yes":
 	print(f"Hi {worker}, Today you have a total of {money} money")
 else:
 	print(f"Hi {worker}, Today you have a total of {money} money")
-para laging lowercase yung tinatype mo dun sa input
+#para laging lowercase yung tinatype mo dun sa input
