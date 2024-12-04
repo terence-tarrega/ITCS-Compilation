@@ -28,8 +28,18 @@ def activities_selection():
     usr = input("Enter the no of which activity you want to access ---> ")
     if usr == "2":
         from Activities import (activity2)
-    elif usr == "3":
-        from Activities import (activity3)
+    elif usr == "4":
+        from Activities import (activity4)
+    elif usr == "6":
+        from Activities import (activity6)
+    elif usr == "7":
+        from Activities import (activity7)
+    elif usr == "8":
+        from Activities import (activity8)
+    elif usr == "9":
+        from Activities import (activity9)
+    elif usr == "10":
+        from Activities import (activity10)
     else:
         print("+++++++++++++++++++++")
         print("Not a Valid Selection")
