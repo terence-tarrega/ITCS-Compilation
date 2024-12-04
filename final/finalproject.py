@@ -28,10 +28,14 @@ def activities_selection():
     usr = input("Enter the no of which activity you want to access ---> ")
     if usr == "2":
         from Activities import (activity2)
+    elif usr == "3":
+        from Activities import (activity3)
     else:
+        print("+++++++++++++++++++++")
         print("Not a Valid Selection")
         print("+++++++++++++++++++++")
-        input("Press Enter to Continue...")
+        print()
+        input("Press Enter to Continue.....")
         clean()
         return(activities_selection())
     
