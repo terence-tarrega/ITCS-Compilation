@@ -32,9 +32,9 @@ clean()
 #++++++++++++++++++++++++++++++++++++++++++++ACTIVITIES+++++++++++++++++++++++++++++++++++++++++++++++++++
 def activities_selection():
     global act
-    print("========================================")
-    print("++++++++++Activities Selection++++++++++")
-    print("========================================")
+    print("=============================================")
+    print("++++++++++ Activities Selection ++++++++++")
+    print("=============================================")
     print()
     usr = input("Enter the no of which activity you want to access ---> ")
     if usr == "2":
@@ -116,8 +116,11 @@ def code_challenges_selection():
 
 def choices(a,b,c,d):
     pass
-    print(f"Welcome {user_name} to Code Compiler 2000!")
-    print("How may I help you today??")
+    print("=========================================================")
+    print(f"++++++++++ Welcome {user_name} to Code Compiler 2000! ++++++++++")
+    print("=========================================================")
+    print()
+    print("+++++ How may I help you today?? +++++")
     print(f"[{a}] Activities")
     print(f"[{b}] Code challenges (submitted)")
     print(f"[{c}] Code_challenges (not submitted/missing )")
@@ -137,12 +140,11 @@ def choices(a,b,c,d):
         print("yt")
         clean()
     else:
-        print("=======================================================")
-        print("++++++++++Invalid Selection, Please Try again++++++++++")
-        print("=======================================================")
+        print("===========================================================")
+        print("++++++++++ Invalid Selection, Please try again ++++++++++")
+        print("===========================================================")
         print()
         return(choices(a,b,c,d))
 choices(1,2,3,4)
-
 print()
 
