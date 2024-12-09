@@ -22,9 +22,9 @@ while isTuloy == True:
         break
         isTuloy = False
     if ask.lower() == "n":
-        print()
+        print("==========================")
         print("::::PROGRAM TERMINATED::::")
-        print()
+        print("==========================")
         break
         isTuloy = False
     if ask.lower() == "yes":

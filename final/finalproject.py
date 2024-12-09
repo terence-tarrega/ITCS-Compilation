@@ -14,13 +14,19 @@ def code():
     code_challenge9, code_challenge10, code_challenge11, code_challenge12,
     code_challenge13, code_challenge14, code_challenge15, code_challenge16 )
 
+def codeM():
+    from Code_challenges2 import ( readme )
+
+
 
 print("Code Compiler")
 
 def entry(): 
     enter = input("Press Spacebar and Enter to Start... ")
     while enter == "":
-        print("Invalid Selection, Please try again")
+        print("===========================================================")
+        print("++++++++++ Invalid Selection, Please try again ++++++++++")
+        print("===========================================================")
         enter = input("Press Spacebar and Enter to Start... ")
 user_name = input("Enter your name: ")
 user_name = entry()
@@ -29,13 +35,13 @@ def clean():
 clean()
 # L KDWH PBVHOI
 
-#++++++++++++++++++++++++++++++++++++++++++++ACTIVITIES+++++++++++++++++++++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++ACTIVITIES++++++++++++++++++++++++++++++++++++++++++++++++++++
 def activities_selection():
     global act
     print("=============================================")
     print("++++++++++ Activities Selection ++++++++++")
     print("=============================================")
-    print()
+    print()    
     usr = input("Enter the no of which activity you want to access ---> ")
     if usr == "2":
         from Activities import (activity2)
@@ -52,16 +58,16 @@ def activities_selection():
     elif usr == "10":
         from Activities import (activity10)
     else:
-        print("+++++++++++++++++++++")
-        print("Not a Valid Selection")
-        print("+++++++++++++++++++++")
+        print("===========================================================")
+        print("++++++++++ Invalid Selection, Please try again ++++++++++")
+        print("===========================================================")
         print()
         input("Press Enter to Continue.....")
         clean()
         return(activities_selection())
     
 
-#++++++++++++++++++++++++++++++++++++++++++++++CODE_CHALLENGES++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++++CODE_CHALLENGES+++++++++++++++++++++++++++++++++++++++++++++++++
 
 def code_challenges_selection():
     print("=============================================")
@@ -73,6 +79,11 @@ def code_challenges_selection():
         from Code_challenges import code_challenge1
     elif usr == "2":
         from Code_challenges import code_challenge2
+        usr2 = "Do you want to continue browsing?? [y/n] "
+        if usr2.lower == "y":
+            from final import (finalproject)
+        else:
+            print("Alrighty then, Thank you for Browsing in the Code Compiler 2000!! :] ")
     elif usr == "3":
         from Code_challenges import code_challenge3
     elif usr == "4":
@@ -102,15 +113,31 @@ def code_challenges_selection():
     elif usr == "16":
         from Code_challenges import code_challenge16
     else:
-        print("+++++++++++++++++++++")
-        print("Not a Valid Selection")
-        print("+++++++++++++++++++++")
+        print("===========================================================")
+        print("++++++++++ Invalid Selection, Please try again ++++++++++")
+        print("===========================================================")
         print()
         input("Press Enter to Continue.....")
         clean()
         return(code_challenges_selection())
 
-
+def missing_incomplete_selection():
+    global act
+    print("==================================================")
+    print("++++++++++ Missing/Incomplete Selection ++++++++++")
+    print("==================================================")
+    print()    
+    usr = input("Enter the no of which missing code_challenge you want to access ---> ")
+    if usr == "2":
+        from Code_challenges2 import (readme)
+    else:
+        print("===========================================================")
+        print("++++++++++ Invalid Selection, Please try again ++++++++++")
+        print("===========================================================")
+        print()
+        input("Press Enter to Continue.....")
+        clean()
+        return(missing_incomplete_selection())
 
 
 
@@ -120,25 +147,30 @@ def choices(a,b,c,d):
     print(f"++++++++++ Welcome {user_name} to Code Compiler 2000! ++++++++++")
     print("=========================================================")
     print()
-    print("+++++ How may I help you today?? +++++")
-    print(f"[{a}] Activities")
-    print(f"[{b}] Code challenges (submitted)")
-    print(f"[{c}] Code_challenges (not submitted/missing )")
-    print(f"[{d}] code testing/examples from yt")
+    print("++++++++++++++ How may I help you today??? ++++++++++++++")
     print()
-    choice = input()
+    print(f"\t\t[{a}] Activities")
+    print(f"\t\t[{b}] Code challenges (submitted)")
+    print(f"\t\t[{c}] Code_challenges (not submitted/missing )")
+    print(f"\t\t[{d}] code testing/examples from yt")
+    print()
+    choice = input("Press the no. of the option you want to select:  ")
     if choice == "1":
+        clean()
         activities_selection()
-        clean()
+        
     elif choice == "2":
+        clean()
         code_challenges_selection()
-        clean()
+        
     elif choice == "3":
+        clean()
         print("Code_challenges2:")
-        clean()
+        
     elif choice == "4":
-        print("yt")
         clean()
+        print("yt")
+        
     else:
         print("===========================================================")
         print("++++++++++ Invalid Selection, Please try again ++++++++++")
