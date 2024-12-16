@@ -14,8 +14,6 @@ def code():
     code_challenge9, code_challenge10, code_challenge11, code_challenge12,
     code_challenge13, code_challenge14, code_challenge15, code_challenge16 )
 
-def codeM():
-    from Code_challenges2 import ( readme )
 
 
 
@@ -38,10 +36,12 @@ clean()
 # L KDWH PBVHOI
 
 def Logout():
+    global clean
     usr = "Do you want to continue browsing?? [y/n] "
     if usr.lower == "y":
         from final import (finalproject)
         return(entry)
+        clean()
     else:
         print("Alrighty then, Thank you for Browsing in the Code Compiler 2000!! :] ")
 
@@ -97,10 +97,13 @@ def code_challenges_selection():
         Logout()
     elif usr == "4":
         from Code_challenges import code_challenge4
+        Logout()
     elif usr == "5":
         from Code_challenges import code_challenge5
+        Logout()
     elif usr == "6":
         from Code_challenges import code_challenge6
+        Logout()
     elif usr == "7":
         from Code_challenges import code_challenge7
     elif usr == "8":
@@ -130,23 +133,6 @@ def code_challenges_selection():
         clean()
         return(code_challenges_selection())
 
-def missing_incomplete_selection():
-    global act
-    print("==================================================")
-    print("++++++++++ Missing/Incomplete Selection ++++++++++")
-    print("==================================================")
-    print()    
-    usr = input("Enter the no of which missing code_challenge you want to access ---> ")
-    if usr == "2":
-        from Code_challenges2 import (readme)
-    else:
-        print("===========================================================")
-        print("++++++++++ Invalid Selection, Please try again ++++++++++")
-        print("===========================================================")
-        print()
-        input("Press Enter to Continue.....")
-        clean()
-        return(missing_incomplete_selection())
 
 
 
