@@ -19,6 +19,8 @@ def codeM():
 
 
 
+
+
 print("Code Compiler")
 
 def entry(): 
@@ -34,6 +36,14 @@ def clean():
     os.system('clear')
 clean()
 # L KDWH PBVHOI
+
+def Logout():
+    usr = "Do you want to continue browsing?? [y/n] "
+    if usr.lower == "y":
+        from final import (finalproject)
+        return(entry)
+    else:
+        print("Alrighty then, Thank you for Browsing in the Code Compiler 2000!! :] ")
 
 #++++++++++++++++++++++++++++++++++++++++++++ACTIVITIES++++++++++++++++++++++++++++++++++++++++++++++++++++
 def activities_selection():
@@ -70,6 +80,7 @@ def activities_selection():
 #++++++++++++++++++++++++++++++++++++++++++++++CODE_CHALLENGES+++++++++++++++++++++++++++++++++++++++++++++++++
 
 def code_challenges_selection():
+    global Logout
     print("=============================================")
     print("++++++++++Code_Challenges Selection++++++++++")
     print("=============================================")
@@ -77,15 +88,13 @@ def code_challenges_selection():
     usr = input("Enter the no of which Code_Challenges you want to access ---> ")
     if usr == "1":
         from Code_challenges import code_challenge1
+        Logout()
     elif usr == "2":
         from Code_challenges import code_challenge2
-        usr2 = "Do you want to continue browsing?? [y/n] "
-        if usr2.lower == "y":
-            from final import (finalproject)
-        else:
-            print("Alrighty then, Thank you for Browsing in the Code Compiler 2000!! :] ")
+        Logout()
     elif usr == "3":
         from Code_challenges import code_challenge3
+        Logout()
     elif usr == "4":
         from Code_challenges import code_challenge4
     elif usr == "5":
