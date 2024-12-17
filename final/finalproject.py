@@ -40,8 +40,8 @@ clean()
 
 def Logout():
     global clean
-    usr = "Do you want to continue browsing?? [y/n] "
-    if usr.lower == "y":
+    usr = input("Do you want to continue browsing?? [y/n]: ")
+    if usr.lower == "n":
         from final import (finalproject)
         return(entry)
         clean()
@@ -169,7 +169,7 @@ def choices(a,b,c,d,):
 
     elif choice == "0":
         clean()
-        print("yt")
+        Logout()
         
     else:
         print("===========================================================")
