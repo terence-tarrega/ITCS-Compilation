@@ -137,9 +137,9 @@ def code_challenges_selection():
         return(code_challenges_selection())
 
 
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CHOICES +++++++++++++++++++++++++++++++++++++++++++++
 
-
-def choices(a,b,c,d):
+def choices(a,b,c,d,):
     global user_name
     print("=========================================================")
     print(f"++++++++++ Welcome User to Code Compiler 2000! ++++++++++")
@@ -148,13 +148,13 @@ def choices(a,b,c,d):
     print("++++++++++++++ How may I help you today??? ++++++++++++++")
     print("|                                                       |")
     print(f"| [{a}] Activities                                        |")
-    print(f"| [{b}] Code challenges (submitted)                       |")
-    print(f"| [{c}] Code_challenges (not submitted/missing )          |")
-    print(f"| [{d}] code testing/examples from yt                     |")
+    print(f"| [{b}] Code challenges (submitted/missing)               |")
+    print(f"| [{c}] References Used                                   |")
+    print(f"| [{d}] Exit Program                                      |")
     print("|                                                       |")
     print("=========================================================")
     print()
-    choice = input("Press the number from [1-4] of the option that you want to select: ")
+    choice = input("Press the number from [0-3] of the option that you want to select: ")
     if choice == "1":
         clean()
         activities_selection()
@@ -166,8 +166,8 @@ def choices(a,b,c,d):
     elif choice == "3":
         clean()
         print("Code_challenges2:")
-        
-    elif choice == "4":
+
+    elif choice == "0":
         clean()
         print("yt")
         
@@ -177,6 +177,6 @@ def choices(a,b,c,d):
         print("===========================================================")
         print()
         return(choices(a,b,c,d))
-choices(1,2,3,4)
+choices(1,2,3,0)
 print()
 
