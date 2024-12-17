@@ -4,7 +4,7 @@ nt = 0
 import os
 
 while Tuloy == True:
-    ask = input("Would you like to add a triangle?")
+    ask = input("Would you like to add a triangle? ")
     if ask.lower() == "no":
         print("==========================")
         print("=== Program Terminated ===")
@@ -23,6 +23,6 @@ while Tuloy == True:
             print()
         continue
     else:
-        print("=================")
-        print("====Try Again====")
-        print("=================")
+        print("===================")
+        print("==== Try Again ====")
+        print("===================")
