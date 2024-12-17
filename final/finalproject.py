@@ -18,18 +18,21 @@ def code():
 
 
 
-
-print("Code Compiler")
-
+print("=========================")
+print("===== Code Compiler =====")
+print("=========================")
 def entry(): 
-    enter = input("Press Spacebar and Enter to Start... ")
-    while enter == "":
+    enter = input("Press Enter to Start... ")
+    while enter == " ":
         print("===========================================================")
         print("++++++++++ Invalid Selection, Please try again ++++++++++")
         print("===========================================================")
-        enter = input("Press Spacebar and Enter to Start... ")
-user_name = input("Enter your name: ")
+        print()
+        enter = input("Press Enter to Start... ")
+print()
+user_name = input("Enter user name: ")
 user_name = entry()
+
 def clean():
     os.system('clear')
 clean()
@@ -49,7 +52,7 @@ def Logout():
 def activities_selection():
     global act
     print("=============================================")
-    print("++++++++++ Activities Selection ++++++++++")
+    print("++++++++++ Activities Selection +++++++++++++")
     print("=============================================")
     print()    
     usr = input("Enter the no of which activity you want to access ---> ")
@@ -137,19 +140,21 @@ def code_challenges_selection():
 
 
 def choices(a,b,c,d):
-    pass
+    global user_name
     print("=========================================================")
-    print(f"++++++++++ Welcome {user_name} to Code Compiler 2000! ++++++++++")
+    print(f"++++++++++ Welcome User to Code Compiler 2000! ++++++++++")
     print("=========================================================")
     print()
     print("++++++++++++++ How may I help you today??? ++++++++++++++")
+    print("|                                                       |")
+    print(f"| [{a}] Activities                                        |")
+    print(f"| [{b}] Code challenges (submitted)                       |")
+    print(f"| [{c}] Code_challenges (not submitted/missing )          |")
+    print(f"| [{d}] code testing/examples from yt                     |")
+    print("|                                                       |")
+    print("=========================================================")
     print()
-    print(f"\t\t[{a}] Activities")
-    print(f"\t\t[{b}] Code challenges (submitted)")
-    print(f"\t\t[{c}] Code_challenges (not submitted/missing )")
-    print(f"\t\t[{d}] code testing/examples from yt")
-    print()
-    choice = input("Press the no. of the option you want to select:  ")
+    choice = input("Press the number from [1-4] of the option that you want to select: ")
     if choice == "1":
         clean()
         activities_selection()
