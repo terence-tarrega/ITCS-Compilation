@@ -15,9 +15,10 @@ def code():
     code_challenge13, code_challenge14, code_challenge15, code_challenge16 )
 
 
+def ref():
+    from References import (loadscreen)
 
-
-
+ref()
 print("=========================")
 print("===== Code Compiler =====")
 print("=========================")
@@ -142,7 +143,7 @@ def code_challenges_selection():
 def choices(a,b,c,d,):
     global user_name
     print("=========================================================")
-    print(f"++++++++++ Welcome User to Code Compiler 2000! ++++++++++")
+    print(f"++++++++++ Welcome {user_name} to Code Compiler 2000! ++++++++++")
     print("=========================================================")
     print()
     print("++++++++++++++ How may I help you today??? ++++++++++++++")
@@ -165,7 +166,7 @@ def choices(a,b,c,d,):
         
     elif choice == "3":
         clean()
-        print("Code_challenges2:")
+        ref()
 
     elif choice == "0":
         clean()
