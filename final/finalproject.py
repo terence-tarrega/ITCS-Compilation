@@ -1,7 +1,7 @@
 import os
 
 def act():
-    from Activities import ( activity2, activity3, activity4, 
+    from Activities import ( activity1,activity2, activity3, activity4, 
     activity6, activity7, activity8, 
     activity9, activity10, activity11, activity12, 
     activity13, activity14, activity15, activity16, 
@@ -19,15 +19,7 @@ def ref():
     from References import (loadscreen)
 
 
-def back():
-    global choices
-    usr2 = input("Do you want to continue browsing?? [y/n]: ")
-    while True:
-        if usr2.lower == "n":
-            from References import loadscreen
-            clean()
-    else:
-        return()
+
 
 
 
@@ -80,7 +72,9 @@ def activities_selection():
     print("=============================================================")
     print()    
     usr = input("Enter the no of which activity you want to access ---> ")
-    if usr == "2":
+    if usr == "1":
+        from Activities import (activity1)
+    elif usr == "2":
         from Activities import (activity2)
     elif usr == "4":
         from Activities import (activity4)
@@ -108,25 +102,32 @@ def activities_selection():
 
 def code_challenges_selection():
     global back
-    print("===================================================")
-    print("++++++++++Code_Challenges Selection++++++++++++++++")
-    print("===================================================")
-    print("""|[ 1 ]. Code Challenge  1   [11]. Code Challenge 11|
-|[ 2 ]. Code Challenge  2   [12]. Code Challenge 12|
-|[ 3 ]. Code Challenge  3   [13]. Code Challenge 13|
-|[ 4 ]. Code Challenge  4   [14]. Code Challenge 14|
-|[ 5 ]. Code Challenge  5   [15]. Code Challenge 15|
-|[ 6 ]. Code Challenge  6   [16]. Code Challenge 16|
-|[ 7 ]. Code Challenge  7                          |
-|[ 8 ]. Code Challenge  8                          |
-|[ 9 ]. Code Challenge  9                          |
-|[ 10 ]. Code Challenge 10                         |
-|==================================================|""")
-    
+    print("\t\t\b\b\b\b====================================================")
+    print("\t\t\b\b\b\b++++++++++ Code_Challenges Selection +++++++++++++++")
+    print("\t\t\b\b\b\b====================================================")
+    print("""   ___________________________________________________________________
+ / \                                                                  \.
+|   |                                                                 |.
+ \_ |      [ 1] Code Challenge  1         [ 9] Code Challenge  9      |.
+    |      [ 2] Code Challenge  2         [10] Code Challenge 10      |.
+    |      [ 3] Code Challenge  3         [11] Code Challenge 11      |.
+    |      [ 4] Code Challenge  4         [12] Code Challenge 12      |.
+    |      [ 5] Code Challenge  5         [13] Code Challenge 13      |.
+    |      [ 6] Code Challenge  6         [14] Code Challenge 14      |.
+    |      [ 7] Code Challenge  7         [15] Code Challenge 15      |.
+    |      [ 8] Code Challenge  8         [16] Code Challenge 16      |.
+    |                                                                 |.
+    |   ______________________________________________________________|___
+    |  /                                                                 /.
+    \_/dc_______________________________________________________________/.
+""")
+    print("note: Press 0 to go back to the main menu :3")
     usr = input("Enter the no of which Code_Challenges you want to access ---> ")
-    if usr == "1":
+    if usr == "0":
+        back()
+    elif usr == "1":
         from Code_challenges import code_challenge1
-        from References import back
+        back()
     elif usr == "2":
         from Code_challenges import code_challenge2
         back()
@@ -172,6 +173,15 @@ def code_challenges_selection():
         clean()
         return(code_challenges_selection())
 
+def back():
+    global code_challenges_selection
+    usr2 = input("Do you want to continue browsing?? [y/n]: ")
+    if usr2.lower == "n":
+        from References import loadscreen
+    elif usr2.lower == "y":
+            callable(code_challenges_selection())
+    else:
+        pass
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CHOICES +++++++++++++++++++++++++++++++++++++++++++++
 
