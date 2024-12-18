@@ -18,12 +18,45 @@ def code():
 def ref():
     from References import (loadscreen)
 
+
+def back():
+    global choices
+    usr2 = input("Do you want to continue browsing?? [y/n]: ")
+    while True:
+        if usr2.lower == "n":
+            from References import loadscreen
+            clean()
+    else:
+        return()
+
+
+
+def Logout():
+    print("===============================================================")
+    print("==================== EXIT PROGRAM SELECTED ====================")
+    print("===============================================================")
+    print()
+    ask = input("Are you sure you want to Close/Exit the Program?? [y/n]: ")
+    while ask == "y":
+        clean()
+        print("==============================================================")
+        print("++++++++++ PROGRAM TERMINATED HAVE A NICE DAY ++++++++++++++++")
+        print("==============================================================")
+        print()
+        break
+    else:
+        clean()
+        return(choices(1,2,3,0))
+
+
+
 ref()
 print("=========================")
 print("===== Code Compiler =====")
 print("=========================")
 def entry(): 
     enter = input("Press Enter to Start... ")
+    ref()
     while enter == " ":
         print("===========================================================")
         print("++++++++++ Invalid Selection, Please try again ++++++++++")
@@ -31,30 +64,20 @@ def entry():
         print()
         enter = input("Press Enter to Start... ")
 print()
-user_name = input("Enter user name: ")
-user_name = entry()
+nameUser = input("Enter user name: ")
 
 def clean():
     os.system('clear')
 clean()
 # L KDWH PBVHOI
 
-def Logout():
-    global clean
-    usr = input("Do you want to continue browsing?? [y/n]: ")
-    if usr.lower == "n":
-        from final import (finalproject)
-        return(entry)
-        clean()
-    else:
-        print("Alrighty then, Thank you for Browsing in the Code Compiler 2000!! :] ")
 
 #++++++++++++++++++++++++++++++++++++++++++++ACTIVITIES++++++++++++++++++++++++++++++++++++++++++++++++++++
 def activities_selection():
     global act
-    print("=============================================")
-    print("++++++++++ Activities Selection +++++++++++++")
-    print("=============================================")
+    print("=============================================================")
+    print("++++++++++++++++++ ACTIVITIES SELECTION +++++++++++++++++++++")
+    print("=============================================================")
     print()    
     usr = input("Enter the no of which activity you want to access ---> ")
     if usr == "2":
@@ -84,32 +107,44 @@ def activities_selection():
 #++++++++++++++++++++++++++++++++++++++++++++++CODE_CHALLENGES+++++++++++++++++++++++++++++++++++++++++++++++++
 
 def code_challenges_selection():
-    global Logout
-    print("=============================================")
-    print("++++++++++Code_Challenges Selection++++++++++")
-    print("=============================================")
-    print()
+    global back
+    print("===================================================")
+    print("++++++++++Code_Challenges Selection++++++++++++++++")
+    print("===================================================")
+    print("""|[ 1 ]. Code Challenge  1   [11]. Code Challenge 11|
+|[ 2 ]. Code Challenge  2   [12]. Code Challenge 12|
+|[ 3 ]. Code Challenge  3   [13]. Code Challenge 13|
+|[ 4 ]. Code Challenge  4   [14]. Code Challenge 14|
+|[ 5 ]. Code Challenge  5   [15]. Code Challenge 15|
+|[ 6 ]. Code Challenge  6   [16]. Code Challenge 16|
+|[ 7 ]. Code Challenge  7                          |
+|[ 8 ]. Code Challenge  8                          |
+|[ 9 ]. Code Challenge  9                          |
+|[ 10 ]. Code Challenge 10                         |
+|==================================================|""")
+    
     usr = input("Enter the no of which Code_Challenges you want to access ---> ")
     if usr == "1":
         from Code_challenges import code_challenge1
-        Logout()
+        from References import back
     elif usr == "2":
         from Code_challenges import code_challenge2
-        Logout()
+        back()
     elif usr == "3":
         from Code_challenges import code_challenge3
-        Logout()
+        back()
     elif usr == "4":
         from Code_challenges import code_challenge4
-        Logout()
+        back()
     elif usr == "5":
         from Code_challenges import code_challenge5
-        Logout()
+        back()
     elif usr == "6":
         from Code_challenges import code_challenge6
-        Logout()
+        back()
     elif usr == "7":
         from Code_challenges import code_challenge7
+        back()    
     elif usr == "8":
         from Code_challenges import code_challenge8
     elif usr == "9":
@@ -141,9 +176,9 @@ def code_challenges_selection():
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CHOICES +++++++++++++++++++++++++++++++++++++++++++++
 
 def choices(a,b,c,d,):
-    global user_name
+
     print("=========================================================")
-    print(f"++++++++++ Welcome {user_name} to Code Compiler 2000! ++++++++++")
+    print(f"++++++++++ Welcome {nameUser} to Code Compiler 2000! ++++++++++")
     print("=========================================================")
     print()
     print("++++++++++++++ How may I help you today??? ++++++++++++++")
@@ -180,4 +215,5 @@ def choices(a,b,c,d,):
         return(choices(a,b,c,d))
 choices(1,2,3,0)
 print()
+
 
