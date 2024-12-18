@@ -67,9 +67,28 @@ clean()
 #++++++++++++++++++++++++++++++++++++++++++++ACTIVITIES++++++++++++++++++++++++++++++++++++++++++++++++++++
 def activities_selection():
     global act
-    print("=============================================================")
-    print("++++++++++++++++++ ACTIVITIES SELECTION +++++++++++++++++++++")
-    print("=============================================================")
+    print("\t\t\t\b\b\b\b\b====================================================")
+    print("\t\t\t\b\b\b\b\b+++++++++++++++ ACTIVITIES SELECTION +++++++++++++++")
+    print("\t\t\t\b\b\b\b\b====================================================")
+    print("""   ________________________________________________________________________________
+ / \                                                                               \.
+|   |                                                                              |.
+ \_ |      [ 1] Activity  1         [11] Activity 11         [21] Activity 21      |.
+    |      [ 2] Activity  2         [12] Activity 12         [22] Activity 22      |.
+    |      [ 3] Activity  3         [13] Activity 13         [23] Activity 23      |.
+    |      [ 4] Activity  4         [14] Activity 14         [24] Activity 24      |.
+    |      [ 5] Activity  5         [15] Activity 15         [25] Activity 25      |.
+    |      [ 6] Activity  6         [16] Activity 16                               |.
+    |      [ 7] Activity  7         [17] Activity 17                               |.
+    |      [ 8] Activity  8         [18] Activity 18                               |.
+    |      [ 9] Activity  9         [19] Activity 19                               |.
+    |      [10] Activity 10         [20] Activity 20                               |.
+    |                                                                              |.
+    |   ___________________________________________________________________________|___
+    |  /                                                                              /.
+    \_/dc____________________________________________________________________________/.
+""")
+    print("note: Press 0 to go back to the main menu :3")
     print()    
     usr = input("Enter the no of which activity you want to access ---> ")
     if usr == "1":
@@ -210,18 +229,15 @@ def choices(a,b,c,d,):
     choice = input("Press the number from [0-3] of the option that you want to select: ")
     if choice == "1":
         clean()
-        ref()
         activities_selection()
         
     elif choice == "2":
         clean()
-        ref()
         code_challenges_selection()
         
     elif choice == "3":
         clean()
-        ref()
-        
+
     elif choice == "0":
         clean()
         Logout()
