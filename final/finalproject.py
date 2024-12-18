@@ -174,19 +174,26 @@ def code_challenges_selection():
         return(code_challenges_selection())
 
 def back():
-    global code_challenges_selection
-    usr2 = input("Do you want to continue browsing?? [y/n]: ")
-    if usr2.lower == "n":
-        from References import loadscreen
-    elif usr2.lower == "y":
-            callable(code_challenges_selection())
+    global code_challenges_selection, choices
+    usr2 = input("Do you want to continue browsing?? [y/n]: ").strip().lower()
+    if usr2 == "n":
+        clean()
+        choices(1, 2, 3, 0)  # Go back to the main menu
+    elif usr2 == "y":
+        clean()
+        code_challenges_selection()  # Return to code challenges selection
     else:
-        pass
+        print("===========================================================")
+        print("++++++++++ Invalid Selection, Please try again ++++++++++")
+        print("===========================================================")
+        print()
+        back()  # Retry until valid input is provided
+
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CHOICES +++++++++++++++++++++++++++++++++++++++++++++
 
 def choices(a,b,c,d,):
-
+    global ref
     print("=========================================================")
     print(f"++++++++++ Welcome {nameUser} to Code Compiler 2000! ++++++++++")
     print("=========================================================")
@@ -203,16 +210,18 @@ def choices(a,b,c,d,):
     choice = input("Press the number from [0-3] of the option that you want to select: ")
     if choice == "1":
         clean()
+        ref()
         activities_selection()
         
     elif choice == "2":
         clean()
+        ref()
         code_challenges_selection()
         
     elif choice == "3":
         clean()
         ref()
-
+        
     elif choice == "0":
         clean()
         Logout()
